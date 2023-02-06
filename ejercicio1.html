@@ -17,16 +17,16 @@
         let figurageometrica = prompt('Indique la figura a calcular: círculo, cuadrado o triangulo. Si desea salir de la aplicación, introduzca "fin"');
         
         if(figurageometrica == "círculo"){
-            let radio = prompt('Indique el radio para calcular el área del círculo');
+            let radio = Number(prompt('Indique el radio para calcular el área del círculo'));
             alert(`El área del círculo es: ${circulo(radio)}`);
 
         }else if(figurageometrica == "cuadrado"){
-            let lado = prompt('Indique el lado del cuadrado para calcular su área');
+            let lado = Number(prompt('Indique el lado del cuadrado para calcular su área'));
             alert(`El área del cuadrado es: ${cuadrado(lado)}`);
 
         }else if(figurageometrica == "triangulo"){
-            let base = prompt('Indique la base del triangulo para calcular su área');
-            let altura = prompt('Indique la altura del triangulo para calcular su área');
+            let base = Number(prompt('Indique la base del triangulo para calcular su área'));
+            let altura = Number(prompt('Indique la altura del triangulo para calcular su área'));
             alert(`El área del triangulo es: ${triangulo(base, altura)}`);
 
         }else if(figurageometrica == "fin"){
