@@ -11,16 +11,19 @@
     <script>
 
         let numeroFactorial = Number(prompt('Indica el número del cual desea calcular su factorial'));
-
-
-        alert(`El factoriale es: ${cuentaFactorial(numeroFactorial)}`);
+        
+        if (numeroFactorial != 0){
+            alert(`El factoriale es: ${cuentaFactorial(numeroFactorial)}`);
+        }else{
+            alert('Debe introducir algún dato');
+        }
 
         function cuentaFactorial(numero){
-            let cuenta=1;
-            for(let i = numero; i >= 1; i--){
-             cuenta = cuenta * i;
-            }
-            return cuenta;
+                let cuenta=1;
+                for(let i = numero; i >= 1; i--){
+                    cuenta = cuenta * i;
+                }
+                return cuenta;
         }
         
     </script>
