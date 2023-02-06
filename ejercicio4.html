@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    
+    <script>
+
+        let numeroFactorial = Number(prompt('Indica el número del cual desea calcular su factorial'));
+
+
+        alert(`El factoriale es: ${cuentaFactorial(numeroFactorial)}`);
+
+        function cuentaFactorial(numero){
+            let cuenta=1;
+            for(let i = numero; i >= 1; i--){
+             cuenta = cuenta * i;
+            }
+            return cuenta;
+        }
+        
+    </script>
+
+</body>
+</html>
