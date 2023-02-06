@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    
+    <script>
+
+        let bucle = true;
+
+        while(bucle==true){
+        
+        let figurageometrica = prompt('Indique la figura a calcular: círculo, cuadrado o triangulo. Si desea salir de la aplicación, introduzca "fin"');
+        
+        if(figurageometrica == "círculo"){
+            let radio = prompt('Indique el radio para calcular el área del círculo');
+            alert(`El área del círculo es: ${circulo(radio)}`);
+
+        }else if(figurageometrica == "cuadrado"){
+            let lado = prompt('Indique el lado del cuadrado para calcular su área');
+            alert(`El área del cuadrado es: ${cuadrado(lado)}`);
+
+        }else if(figurageometrica == "triangulo"){
+            let base = prompt('Indique la base del triangulo para calcular su área');
+            let altura = prompt('Indique la altura del triangulo para calcular su área');
+            alert(`El área del triangulo es: ${triangulo(base, altura)}`);
+
+        }else if(figurageometrica == "fin"){
+            bucle=false
+
+        }else{
+            alert("La figura geométrica no corresponde con las opciones preestablecidas");
+        }
+        }
+
+
+        function circulo(valor){
+            return (valor * valor) * Math.PI
+        }
+
+        function triangulo(base, altura){
+            return (base * altura) / 2
+        }
+
+        function cuadrado(valor){
+            return valor*valor
+        }
+
+    </script>
+
+</body>
+</html>
