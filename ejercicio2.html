@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+    <script>
+
+        let ciclos = prompt('Introduzca los número que desea generar');
+        let numerominimo = prompt('Indique numero menor del rango a generar');
+        let numeromaximo = prompt('Indique numero mayor del rango a generar');
+
+        while(ciclos>0){
+            console.log(numeroaleatorio(numerominimo, numeromaximo));
+            ciclos--;
+        }
+
+        function numeroaleatorio(minimo, maximo) {
+            minimo = Math.ceil(minimo);
+            maximo = Math.floor(maximo);
+            return Math.floor(Math.random() * (maximo - minimo) + minimo);
+        }
+
+    </script>
+
+</body>
+</html>
