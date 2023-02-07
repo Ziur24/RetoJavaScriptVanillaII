@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    
+    <script>
+
+        let valorPrueba = parseInt(prompt('Introduce el número decimal para comvertir a binario'));
+
+        convertirBinario(valorPrueba);
+        
+        function convertirBinario(numeroPrueba){
+    
+            let numero = numeroPrueba;
+            let numeroBinario = (numero % 2).toString();
+            for (; numero > 1; ) {
+                numero = parseInt(numero / 2);
+                numeroBinario =  (numero % 2) + (numeroBinario);
+            }
+            return console.log('Resultado en número binario: ' + numeroBinario);
+            
+        }
+    
+
+    </script>
+
+</body>
+</html>
