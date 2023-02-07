@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+
+    <script>
+
+        let bucle = true;
+
+        for(; bucle==true;){
+        
+            let moneda = prompt('Indique el tipo de monea para hacer la combersión: dólares, yenes o libras. Si desea salir introduzca fin');
+
+            if(moneda == 'fin'){
+                bucle=false;
+            }else{
+                
+                let euros = Number(prompt('Indique la cantidad en euros'));
+                alert(conversion(moneda, euros));
+            }
+
+        }
+
+        function conversion(monedaCambio, cantidadEuros){
+
+            switch(monedaCambio){
+
+                case 'dólares':
+                    return (`El cambio a ${monedaCambio} es de ${cantidadEuros * 1.28611}`);
+                break;
+
+                case 'yenes':
+                    return (`El cambio a ${monedaCambio} es de ${cantidadEuros * 129.852}`);
+                break;
+
+                case 'libras':
+                    return (`El cambio a ${monedaCambio} es de ${cantidadEuros * 0.86}`);
+                break;
+                
+                default:
+                    return alert('Introduzca una moneda válida');
+                break;
+            }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
