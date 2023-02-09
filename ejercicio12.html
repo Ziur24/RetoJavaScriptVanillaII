@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+
+    <script>
+
+        /* Declaro las variables que van a ser usadas*/
+        let arrayAleatorio = [];
+        let tamaño = Number(prompt('Indique el tamaño del array'));
+        let bucle = true;
+
+        for (;bucle==true;){
+
+            let numeroFinal= Number(prompt('Indique el número final que desea buscar, si desea salir de la aplicación, escriba fin'));
+            
+            /* Compruebo que sea número de un asola cifra positivo */
+            if (!isNaN.numeroFinal && numeroFinal >=0 && numeroFinal.toString().length==1){
+               
+                /* Se realiza el bucle las veces indicadas*/
+                for(let i = 1; i <= tamaño ; i++){
+                    añadir(arrayAleatorio);
+                }
+                bucle = false;
+                /* Al terminar bucle se imprime el array por consola */
+                leeArray(arrayAleatorio);
+            }else{
+                alert('Debe introducir un número positivo de una sola cifra');
+            }
+
+            /* Función que genera el núemro aleatorio y si acaba en el núemro indicado lo guarda en el array */
+            function añadir(array){
+                let minimo = 1;
+                let maximo = 300;
+                let prueba = "";
+                let numeroAleatorio = Math.floor(Math.random() * (maximo - minimo) + minimo);
+            
+                if (numeroControl(numeroAleatorio)){
+                array.push(numeroAleatorio);
+                }
+            }
+
+            /* Función que comprueba que el número final sea el que se ha indicado */ 
+            function numeroControl(numero){
+                let cadena = numero.toString();
+                if (cadena.substr(-1)==numeroFinal.toString()){
+                    return true
+                }else{
+                    return false
+                }
+            }
+
+            /* Función para recorrer el array y sacarlo por consola */
+            function leeArray(array){
+                let suma = 0;
+
+                for(let i = 0; i< array.length; i++){
+                    console.log(`Indice: ${i} Valor: ${array[i]}`);
+                }
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
