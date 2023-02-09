@@ -22,20 +22,39 @@
         function añadir(){
 
             let minimo = 0;
-            let maximo = 9;
+            let maximo = 500;
             
             let numeroAleatorio = Math.floor(Math.random() * (maximo - minimo) + minimo);
-            arrayAleatorio.push(numeroAleatorio);
+            
+            if(numeroPrimo(numeroAleatorio)==true){
+                arrayAleatorio.push(numeroAleatorio);
+            }
+
+        }
+
+        function numeroPrimo(primo){
+            
+            if (primo<=1) return false;
+
+            for (var i = 2; i <= primo-1; i++){
+                if (primo % i == 0) return false;
+            }
+            return true;
         }
 
         function leeArray(array){
             let suma = 0;
-
+            let numeroMayor=0
             for(let i = 0; i< array.length; i++){
                 suma = (suma + Number(array[i]));
                 console.log(`Indice: ${i} Valor: ${array[i]}`);
+                
+                if (Number(array[i])>numeroMayor){
+                    numeroMayor=Number(array[i]);
+                }
+    
             }
-            console.log(`Total: ${suma}`);
+            console.log(`Total: ${suma} El numero mas alto es el: ${numeroMayor}`);
         }
 
     </script>
