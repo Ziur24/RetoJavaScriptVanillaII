@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+
+    <script>
+
+        let tamaño = Number(prompt('Indique el tamaño del array'));
+        
+        let arrayPrincipal = []; 
+        let arraySecundario = [];
+        let arrayResultado = [];
+
+        for(let i = 0; i <= tamaño ; i++){
+            añadir(arrayPrincipal);
+        }
+
+        reasignar(arrayPrincipal);
+        multiplicaArray(arrayPrincipal, arraySecundario);
+        leerArray(arrayPrincipal, arraySecundario, arrayResultado);
+
+        function añadir(array){
+
+            let minimo = 0;
+            let maximo = 500;
+            
+            let numeroAleatorio = Math.floor(Math.random() * (maximo - minimo) + minimo);
+            array.push(numeroAleatorio);
+        }
+
+       function reasignar(array){
+
+            for(let i = 0; i< array.length; i++){
+               añadir(arraySecundario);
+            }
+
+       }
+
+        function multiplicaArray(array1, array2){
+            let multiplicacion = 0;
+            
+            for(let i = 0; i< array1.length; i++){
+               multiplicacion = (Number(array1[i])*Number(array2[i]));
+               arrayResultado.push(multiplicacion);
+            }
+        }
+
+        function leerArray(array1, array2, array3 ){
+
+            for(let i = 0; i< array1.length; i++){
+               
+                console.log(`Indice: ${i} Valor Array Primero: ${array1[i]}`);
+                console.log(`Indice: ${i} Valor Array Reasignado: ${array2[i]}`);
+                console.log(`Indice: ${i} Valor Array Multiplicación: ${array3[i]}`);
+
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
